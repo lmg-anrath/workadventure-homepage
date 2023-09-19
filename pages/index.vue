@@ -1,6 +1,10 @@
 <script lang="ts" setup>
 import '../assets/main.sass';
 import '../assets/mobile.sass';
+
+function Redirect() {
+  window.open('https://play.workadventure-lmg.de', '_blank');
+}
 </script>
 
 <template>
@@ -10,7 +14,7 @@ import '../assets/mobile.sass';
         WORKADVENTURE<div>LMG</div>
       </div>
       <div class="play-button">
-        <button>JETZT ÖFFNEN!</button>
+        <button @click="Redirect()">JETZT ÖFFNEN!</button>
         <div class="hover"></div>
       </div>
     </div>
