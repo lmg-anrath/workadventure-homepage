@@ -76,17 +76,14 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
           path: ./dist
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          target_branch: main
+          folder: .output/public
+          branch: main
+          token: ${{ secrets.TOKEN }}
+          repository-name: lmg-anrath/lmg-anrath.github.io
+        env:
+          ACCESS_TOKEN: ${{ secrets.TOKEN }}
+          BRANCH: main
+          REPO: lmg-anrath/lmg-anrath.github.io
