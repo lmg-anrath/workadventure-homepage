@@ -29,6 +29,9 @@ function Redirect() {
       <div class="heading">
         WORKADVENTURE<div>LMG</div>
       </div>
+      <div class="text">
+        <p>"WorkAdventure LMG" ist ein innovatives Projekt am Lise-Meitner-Gymnasium, das Schülern die Möglichkeit bietet, das Schulgebäude in einer zweidimensionalen Umgebung zu erkunden, ähnlich wie in einem Computerspiel.<br><br> Neben dem Besuch von Klassen- und Fachräumen, die mit zusätzlichen Inhalten wie Videos und Präsentationen gefüllt sind, können die Schüler auch an DSGVO-konformen Videokonferenzen teilnehmen.</p>
+      </div>
       <div class="play-button">
         <button @click="Redirect()">JETZT ÖFFNEN!</button>
         <div class="hover" ref="hover"></div>
